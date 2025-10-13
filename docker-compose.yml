@@ -1,7 +1,7 @@
 services:
   mysqldb:
     image: mysql:8
-    container_name: mysql-db1
+    container_name: mysql-dbtravel
     environment:
       MYSQL_ROOT_PASSWORD: docker
       MYSQL_DATABASE: traveldestinationdb
@@ -14,7 +14,7 @@ services:
 
   backend:
     image: nandinireddy325/docker-travelbackend:latest
-    container_name: springboot
+    container_name: springboot-travel
     ports:
       - "2026:3835"
     depends_on:
@@ -25,7 +25,7 @@ services:
 
   frontend:
     image: nandinireddy325/docker-travelfrontend:latest
-    container_name: react
+    container_name: react-travel
     ports:
       - "3001:80"
     depends_on:
