@@ -23,7 +23,11 @@ public class TravelPlaceController {
     public String home() {
         return "Travel API is running 🚀";
     }
-
+     @GetMapping("/docker")
+    public String docker() 
+    {
+        return "Docker Full Stack Deployment Demo with git actions";
+    }
     // Add a new travel place
     @PostMapping("/add")
     public ResponseEntity<TravelPlace> addPlace(@RequestBody TravelPlace place) {
